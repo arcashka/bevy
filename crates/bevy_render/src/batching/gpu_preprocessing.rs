@@ -48,7 +48,9 @@ impl Plugin for BatchingPlugin {
             return;
         };
 
-        render_app.init_resource::<GpuPreprocessingSupport>();
+        render_app
+            .init_resource::<GpuPreprocessingSupport>()
+            .init_resource::<IndirectParametersBuffer>();
     }
 }
 

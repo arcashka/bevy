@@ -220,8 +220,6 @@ impl Plugin for MeshRenderPlugin {
                     );
             };
 
-            let indirect_parameters_buffer = IndirectParametersBuffer::new();
-
             let render_device = render_app.world().resource::<RenderDevice>();
             if let Some(per_object_buffer_batch_size) =
                 GpuArrayBuffer::<MeshUniform>::batch_size(render_device)
@@ -232,9 +230,7 @@ impl Plugin for MeshRenderPlugin {
                 ));
             }
 
-            render_app
-                .insert_resource(indirect_parameters_buffer)
-                .init_resource::<MeshPipeline>();
+            render_app.init_resource::<MeshPipeline>();
         }
 
         // Load the mesh_bindings shader module here as it depends on runtime information about
