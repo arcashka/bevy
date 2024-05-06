@@ -61,7 +61,10 @@
 @group(0) @binding(18) var irradiance_volume_sampler: sampler;
 #endif
 
-// NB: If you change these, make sure to update `tonemapping_shared.wgsl` too.
+// NB if needs to be changed, then change those also
+// * mesh2d_view_bindings.wgsl
+// * sprite_view_bindings.wgsl
+// * tonemapping_shared.wgsl
 @group(0) @binding(19) var dt_lut_texture: texture_3d<f32>;
 @group(0) @binding(20) var dt_lut_sampler: sampler;
 

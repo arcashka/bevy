@@ -11,6 +11,10 @@
     @group(0) @binding(3) var dt_lut_texture: texture_3d<f32>;
     @group(0) @binding(4) var dt_lut_sampler: sampler;
 #else
+// NB if needs to be changed, then change those also
+// * mesh_view_bindings.wgsl
+// * mesh2d_view_bindings.wgsl
+// * sprite_view_bindings.wgsl
     @group(0) @binding(19) var dt_lut_texture: texture_3d<f32>;
     @group(0) @binding(20) var dt_lut_sampler: sampler;
 #endif
